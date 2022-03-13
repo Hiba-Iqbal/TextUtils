@@ -18,6 +18,15 @@ const TextForm = ({ heading }) => {
     setText(lowerText);
   };
 
+  const senCase = () => {
+    let sentence = text
+      .split(" ")
+      .map((text) => text[0].toUpperCase() + text.slice(1).toLowerCase())
+      .join(" ");
+
+    setText(sentence);
+  };
+
   return (
     <div>
       <div className="container my-5 form-floating">
@@ -35,7 +44,7 @@ const TextForm = ({ heading }) => {
             upperCase();
           }}
         >
-          Upper Case
+          UPPER CASE
         </div>
         <div
           className="btn btn-info mx-3"
@@ -43,7 +52,23 @@ const TextForm = ({ heading }) => {
             lowerCase();
           }}
         >
-          Lower Case
+          lower case
+        </div>
+        <div
+          className="btn btn-info mx-3"
+          onClick={() => {
+            senCase();
+          }}
+        >
+          Sentence Case
+        </div>
+        <div
+          className="btn btn-info"
+          onClick={() => {
+            setText("");
+          }}
+        >
+          Clear
         </div>
       </div>
       <div className="container">
