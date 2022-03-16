@@ -55,7 +55,7 @@ const TextForm = ({ heading }) => {
           lower case
         </div>
         <div
-          className="btn btn-info mx-3"
+          className="btn btn-info"
           onClick={() => {
             senCase();
           }}
@@ -63,7 +63,7 @@ const TextForm = ({ heading }) => {
           Sentence Case
         </div>
         <div
-          className="btn btn-info"
+          className="btn btn-info mx-3"
           onClick={() => {
             setText("");
           }}

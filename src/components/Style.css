@@ -1,0 +1,7 @@
+.container-flex{
+    width: auto;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
